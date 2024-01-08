@@ -4,6 +4,8 @@ export const getUserDataController = async (req, res) => {
   try {
     const userId = req.user.id;
 
+    console.log(userId);
+
     const user = await User.findOne({ _id: userId });
 
     if (!user)

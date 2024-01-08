@@ -19,6 +19,10 @@ const PORT = process.env.PORT;
 const swaggerJSDoc = YAML.load("./api.yaml");
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const corsOptions = {
+  origin: ["http://localhost:3000", "http://localhost:8000"],
+  optionsSuccessStatus: 200,
+};
 
 app.use(express.json());
 app.use(cors());
@@ -26,9 +30,9 @@ app.use(express.static("public"));
 
 // Define a route
 app.use("/", express.static("build"));
-app.get("/*", (req, res) => {
-  res.sendFile(join(__dirname, "./build", "index.html"));
-});
+// app.get("/*", (req, res) => {
+//   res.sendFile(join(__dirname, "./build", "index.html"));
+// });
 
 // user routes
 app.use("/api", userRouter);

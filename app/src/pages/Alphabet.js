@@ -21,6 +21,9 @@ export default function Alphabet() {
   const { currentUser, token, setFlag } = useContext(userContext);
   const navigate = useNavigate();
 
+  console.log(alphData);
+  console.log(currentUser);
+
   const prevBtnHandler = () => {
     if (currentIndex > 0) setCurrentIndex((prev) => prev - 1);
   };
