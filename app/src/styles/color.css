@@ -1,0 +1,167 @@
+.color-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.color-containers {
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: rgb(84, 84, 84);
+  padding: 1% 2%;
+  border-radius: 15px;
+}
+
+.color-containers .each-color {
+  width: calc(100% - 10%);
+  height: calc(100% - 10%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 5px 1px 25px 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.color-containers .each-color.flipped {
+  transform: rotateY(180deg);
+}
+
+.color-containers .each-color.flipped h2 {
+  transform: rotateY(180deg);
+  transition: all 0.6s ease-in-out;
+}
+
+.color-containers .each-color h2 {
+  color: rgba(46, 46, 46, 0.636);
+  text-transform: capitalize;
+  font-size: 4vh;
+}
+
+.shuffle {
+  width: 10%;
+  height: 8%;
+  margin-top: 1%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 2vh;
+  cursor: pointer;
+}
+
+.shuffle:hover {
+  background-color: rgba(0, 0, 0, 0.926);
+}
+
+.shuffle:active {
+  background-color: rgba(36, 35, 35, 0.926);
+}
+
+.color-button-container {
+  flex-direction: column;
+}
+
+.level,
+.color-button-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100vw;
+}
+.color-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/color-bg.jpg");
+  background-size: cover;
+}
+
+.color-button-container h1 {
+  color: white;
+  font-size: 4vw;
+  margin: 0;
+}
+.level-button {
+  width: 30%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: 2%;
+  border: 1px solid rgb(118, 118, 118);
+  outline: 0;
+  background-color: rgb(141, 21, 165);
+  color: white;
+  box-shadow: 5px 1px 35px 5px black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 2vw;
+}
+
+.level-button:hover {
+  transform: scale(1.2);
+  background-color: rgb(29, 205, 41);
+}
+
+.level-button:active {
+  transform: scale(1.2);
+  background-color: rgba(0, 0, 255, 0.727);
+}
+
+@media screen and (max-width: 786px) {
+  .color-containers {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .level-button {
+    width: 50%;
+    font-size: 4vw;
+  }
+
+  .color-containers .each-color {
+    width: calc(90% - 5%);
+  }
+
+  .color-button-container h1 {
+    font-size: 8vw;
+    margin: 2%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .color-containers {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .color-containers .each-color {
+    width: calc(90% - 5%);
+  }
+  .level-button {
+    width: 30%;
+    font-size: 5vw;
+  }
+  .color-button-inner {
+    flex-direction: column;
+  }
+
+  .color-button-container h1 {
+    font-size: 8vw;
+    margin: 2%;
+  }
+}

@@ -1,0 +1,83 @@
+.navbar {
+  background-color: #351a1a00;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: 12vh;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #d6d6d600;
+  margin-right: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* Additional style for the login/logout button */
+.nav-link.login-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.nav-link.login-button:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+.menu-container {
+  position: absolute;
+  color: white;
+  top: 20;
+  background-color: white;
+  width: 50vw;
+  padding: 5% 5%;
+  z-index: 200;
+  border-radius: 15px;
+  box-shadow: 1px 1px 25px black;
+}
+.menu a {
+  width: 100%;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(143, 143, 143);
+  margin: 2%;
+  font-size: large;
+  font-weight: 600;
+  color: black;
+}
+
+.menu a:hover {
+  background-color: rgb(181, 181, 181);
+}
+
+.menu a:active {
+  background-color: rgb(181, 181, 181);
+}

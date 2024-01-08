@@ -1,0 +1,56 @@
+.animal-main {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/forest.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.animal-name-container {
+  /* background-color: bisque; */
+  width: 40%;
+  text-align: start;
+}
+.animal-main h1 {
+  text-transform: capitalize;
+  font-size: 8vh;
+  padding: 0;
+  margin: 0;
+}
+
+.animalImg-container {
+  min-height: 60vh;
+  min-width: 55vw;
+  padding: 0.5% 2%;
+  background-color: rgba(181, 1, 212, 0.678);
+  border-radius: 10px;
+  margin: 2rem;
+  box-shadow: 1px 4px 10px 1px black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.animalImg-container .loader-animal {
+  width: 20%;
+  transform: rotateY(180deg);
+}
+.animalImg-container:hover {
+  box-shadow: 1px 4px 15px 2px black;
+  background-color: rgba(217, 0, 255, 0.904);
+  transform: scale(1.1);
+}
+
+.animalImg {
+  height: 50vh;
+  aspect-ratio: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .animalImg-container {
+    width: 90%;
+  }
+  .animalImg {
+    height: 70vw;
+    aspect-ratio: 1;
+  }
+}

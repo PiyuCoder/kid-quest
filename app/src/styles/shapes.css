@@ -1,0 +1,162 @@
+.shape-game-main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(161, 161, 161);
+}
+
+.shape-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shapes-container,
+.pits-container {
+  display: flex;
+  gap: 2vw;
+  min-width: 25vw;
+  height: 30vh;
+  padding: 5% 10%;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pits-container {
+  background-color: rgb(23, 23, 23);
+  box-shadow: 15px 10px 35px 10px;
+}
+
+.Square-shape,
+.Square-pit {
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.Rectangle-shape,
+.Rectangle-pit {
+  width: 60px;
+  height: 100px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Triangle-shape,
+.Triangle-pit {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 69.28px solid #001aff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.Inverted-Triangle-shape,
+.Inverted-Triangle-pit {
+  width: 25%;
+  aspect-ratio: 1;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 69.28px solid #00ff04;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Triangle-pit {
+  border-bottom: 69.28px solid #434343e2;
+}
+
+.Inverted-Triangle-pit {
+  border-top: 69.28px solid #434343e2;
+}
+
+.Square-shape {
+  background-color: #ffd700;
+}
+
+.Square-pit {
+  background-color: #434343e2;
+}
+
+.Rectangle-shape {
+  background-color: #f700ff;
+}
+
+.Rectangle-pit {
+  background-color: #434343e2;
+}
+
+.Circle-shape,
+.Circle-pit {
+  width: 80px;
+  height: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Circle-shape {
+  background-color: #ff2600;
+}
+
+.Circle-pit {
+  background-color: #434343e2;
+}
+
+.shapes-container .Triangle-shape.dragged,
+.shapes-container .Square-shape.dragged,
+.shapes-container .Rectangle-shape.dragged,
+.shapes-container .Circle-shape.dragged,
+.shapes-container .Inverted-Triangle-shape.dragged {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.Circle-shape,
+.Triangle-shape,
+.Square-shape,
+.Inverted-Triangle-shape,
+.Rectangle-shape {
+  animation: blink 1s infinite;
+}
+
+.matched {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* @media screen and (max-width: 480px) {
+  .shapes-container,
+  .pits-container {
+    width: 80%;
+  }
+} */

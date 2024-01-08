@@ -1,0 +1,66 @@
+.game-main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(23, 23, 23);
+}
+
+.game-container {
+  width: 60%;
+  height: 100vh;
+}
+
+.game {
+  width: 40%;
+  aspect-ratio: 1;
+  background-color: rgb(40, 0, 77);
+  margin: 3%;
+  box-shadow: 15px 10px 35px 1px;
+  border-radius: 15px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.game img {
+  width: 40%;
+}
+
+.game:hover {
+  background-color: rgb(70, 4, 131);
+  transform: scale(1.1);
+  box-shadow: 15px 10px 45px 1px;
+}
+
+.game p {
+  margin: 1%;
+  padding: 0;
+  text-transform: uppercase;
+  color: white;
+}
+
+.allMatched {
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  border-radius: 50px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.153);
+}
+
+.allMatched h1 {
+  color: #ffffff;
+  font-size: 5rem;
+  padding: 0;
+  margin: 0;
+  animation: flashMessage 1s infinite alternate; /* Flashing animation */
+}
+
+@media screen and (max-width: 768px) {
+  .game-container {
+    flex-direction: column;
+  }
+  .game {
+    width: 80%;
+  }
+}

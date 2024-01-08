@@ -1,0 +1,134 @@
+.flip-card-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  background-color: rgb(23, 23, 23);
+  color: white;
+}
+
+.flip-card-container {
+  width: 80%;
+  height: 85%;
+  padding: 1% 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(170, 112, 11);
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: rgb(0, 0, 0);
+  width: calc(50% - 20%);
+  aspect-ratio: 1;
+  margin: 0.5rem;
+  perspective: 1000px;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
+  max-width: 150px;
+  box-shadow: 5px 5px 10px black;
+  overflow: hidden;
+}
+
+.card img {
+  width: 80%; /* Set width to 100% to fill the card */
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
+
+.card.matched {
+  background-color: rgba(0, 255, 13, 0.596);
+}
+
+.card.flipped {
+  background-color: rgba(26, 26, 26, 0.834);
+  transform: rotateY(180deg);
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20px black;
+}
+
+button {
+  margin: 1%;
+  margin-top: 5%;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.allMatched {
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  height: 50%;
+  border-radius: 50px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.055);
+}
+
+.allMatched h1 {
+  color: #0022ff;
+  font-size: 5rem;
+  padding: 0;
+  margin: 0;
+  animation: flashMessage 1s infinite alternate; /* Flashing animation */
+}
+
+.restarting {
+  animation: restart 1s infinite;
+}
+
+/* restart animation keyframes */
+@keyframes restart {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* Flashing animation keyframes */
+@keyframes flashMessage {
+  0% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries for responsiveness */
+@media screen and (min-width: 768px) {
+  .flip-card-container {
+    width: 40vw;
+    height: 80vh;
+  }
+
+  .card {
+    width: calc(40% - 1rem);
+  }
+}
+
+/* @media screen and (max-width: 576px) {
+  
+  .card {
+    width: calc(80% - 0.8rem);
+  }
+} */

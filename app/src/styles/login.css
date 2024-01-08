@@ -1,0 +1,94 @@
+.login-main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #8300ca;
+}
+
+.login-form {
+  width: 80%;
+  padding: 12% 2%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  padding: 0;
+  margin: 5%;
+  color: #8300ca;
+}
+
+.login-container input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-container button {
+  width: 80%;
+  padding: 10px;
+  background-color: #8300ca;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-container button:hover {
+  background-color: #555;
+}
+
+.login-container p {
+  color: red;
+}
+
+.why-kidquest-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: #f4f4f4; /* Light Gray */
+}
+
+.why-kidquest-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.why-kidquest-heading {
+  text-align: center;
+  color: #8300ca; /* KidQuest Green */
+}
+
+.why-kidquest-text {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.why-kidquest-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.why-kidquest-list li {
+  margin-bottom: 10px;
+}
+
+.why-kidquest-list li strong {
+  color: #8300ca; /* KidQuest Green */
+}

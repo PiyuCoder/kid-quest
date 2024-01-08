@@ -1,0 +1,53 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #8300ca; /* KidQuest Green */
+}
+
+.register-form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.register-heading {
+  text-align: center;
+  color: #8300ca; /* KidQuest Green */
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.register-label {
+  margin-top: 10px;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-button {
+  background-color: #fff;
+  color: #8300ca; /* KidQuest Green */
+  padding: 10px;
+  border: 1px solid #8300ca; /* KidQuest Green */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.register-button:hover {
+  background-color: #8300ca; /* KidQuest Green */
+  color: #fff;
+}

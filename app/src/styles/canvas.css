@@ -1,0 +1,77 @@
+.canvas-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.801);
+}
+
+canvas {
+  border: 10px rgb(218, 80, 1) solid;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  color: white;
+}
+
+#colorPalette {
+  display: flex;
+  gap: 10px;
+  transition: all 0.5s ease-in-out;
+  margin-right: 17%;
+  z-index: 100;
+}
+
+#colorPalette button:hover,
+.clear:hover,
+.close-slate:hover {
+  transform: scale(1.2);
+  transition: all 0.1s ease-in-out;
+}
+
+.color-container {
+  background-color: rgba(51, 49, 49, 0.577);
+  padding: 2px 5px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clear {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 7%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.704);
+  color: white;
+  font-size: 0.5rem;
+}
+
+.close-slate {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.504);
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  canvas {
+    width: 100;
+  }
+
+  #colorPalette {
+    display: flex;
+    gap: 1px;
+    transition: all 0.5s ease-in-out;
+    margin-right: 17%;
+  }
+}

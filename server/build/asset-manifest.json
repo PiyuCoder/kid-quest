@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.17f98db9.css",
+    "main.js": "/static/js/main.e994120e.js",
+    "static/js/787.0f8d78ff.chunk.js": "/static/js/787.0f8d78ff.chunk.js",
+    "static/media/home-bg.png": "/static/media/home-bg.9faf0799ffaa1c95160d.png",
+    "static/media/board.jpg": "/static/media/board.b00937cbcc41cc20f6f1.jpg",
+    "static/media/color-bg.jpg": "/static/media/color-bg.26d82b87e7313f0084d3.jpg",
+    "static/media/cubes.gif": "/static/media/cubes.b5178f67bdffb8dafa40.gif",
+    "static/media/forest.jpg": "/static/media/forest.f7a7e660b76abbd70ddb.jpg",
+    "static/media/owl.png": "/static/media/owl.2b76bb07694279d3d4b4.png",
+    "static/media/orange.png": "/static/media/orange.9f3a02ea5760c32d1493.png",
+    "static/media/kid.png": "/static/media/kid.08e9edbda0210088c2d6.png",
+    "static/media/palette.png": "/static/media/palette.310538444ee90b20d316.png",
+    "static/media/lion.png": "/static/media/lion.8ae4d5f0bbe03ca81c36.png",
+    "static/media/epilepsy.png": "/static/media/epilepsy.e0aeeeff87b4abdaf7f2.png",
+    "static/media/rock.png": "/static/media/rock.ddfc50570c78a78fde65.png",
+    "static/media/parents.png": "/static/media/parents.ded27bcf7a7a5f374a3f.png",
+    "static/media/countdown.png": "/static/media/countdown.f3c16b6353f596860a27.png",
+    "static/media/parrot.png": "/static/media/parrot.00a18e023b01a3fe846d.png",
+    "static/media/ice-cream.png": "/static/media/ice-cream.3dce97c1c19cd5af82ce.png",
+    "static/media/jam.png": "/static/media/jam.2be67f46587cbe42027b.png",
+    "static/media/joystick.png": "/static/media/joystick.201c3cd5a18f3c804259.png",
+    "static/media/alphabet.png": "/static/media/alphabet.3516447e42781ae43dd6.png",
+    "static/media/candy.png": "/static/media/candy.0a06263c23da9662e68b.png",
+    "static/media/shapes.png": "/static/media/shapes.30d3c595ecbf72911b81.png",
+    "static/media/slate.png": "/static/media/slate.8b30a9bf237717330517.png",
+    "index.html": "/index.html",
+    "main.17f98db9.css.map": "/static/css/main.17f98db9.css.map",
+    "main.e994120e.js.map": "/static/js/main.e994120e.js.map",
+    "787.0f8d78ff.chunk.js.map": "/static/js/787.0f8d78ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.17f98db9.css",
+    "static/js/main.e994120e.js"
+  ]
+}

@@ -1,0 +1,242 @@
+/* ParentsDashboard.css */
+
+.parents-dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.parents-inner-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.parent-cat-card-container {
+  display: flex;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  height: 40%;
+}
+
+.profile {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #000000;
+  box-shadow: 10px 10px 10px 2px rgb(5, 5, 5);
+  /* border: 2px solid #ddd; */
+  border-radius: 15px;
+}
+
+/* ParentCatCard.css */
+
+.parent-cat-card {
+  aspect-ratio: 1;
+  width: 10vw;
+  background-color: #121212;
+  box-shadow: 10px 10px 10px 2px rgb(5, 5, 5);
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.parent-cat-card:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 20px 2px rgb(5, 5, 5);
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #0554ff;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.parent-cat-card p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.loading {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Report */
+
+.report {
+  width: 100%;
+  height: 50vh;
+  border: 5px solid #2f2f2f;
+  border-radius: 15px;
+  margin: 10px;
+  overflow: auto;
+  text-align: start;
+  padding: 0 5%;
+  position: relative;
+  background-color: #494949b9;
+  /* box-shadow: 10px 10px 10px 2px rgb(5, 5, 5); */
+}
+
+.currently p {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #313131;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dddddd00;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1a1a1a;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #808080;
+}
+
+.currently {
+  margin-left: 3%;
+  color: #0ac300;
+  font-size: 5vh;
+  text-transform: capitalize;
+}
+
+.report-quiz-container {
+  width: 100%;
+  gap: 0.5rem;
+  padding: 0;
+  /* background-color: #4caf50; */
+}
+
+.report-quiz {
+  width: 100%;
+  background-color: rgb(27, 27, 27);
+  text-align: left;
+  padding: 1% 3%;
+  /* border: 1px solid rgb(202, 202, 202); */
+  box-shadow: 10px 10px 10px 2px rgb(5, 5, 5);
+  border-radius: 5px;
+}
+
+.report-quiz-ques {
+  font-weight: 700;
+}
+.report-quiz p {
+  padding: 0;
+  margin: 0;
+}
+
+.report-quiz-img img {
+  height: 5vw;
+  max-height: 5vh;
+}
+
+.report-quiz-color {
+  height: 5vh;
+  width: 15%;
+  border-radius: 5px;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.report-quiz-img {
+  height: 5vh;
+}
+.report-quiz .isCorrect {
+  padding: 0;
+  margin: 0;
+  float: right;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.report-quiz-ans {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.comment {
+  margin-left: 1%;
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .parents-inner-container {
+    width: 100%;
+  }
+
+  .thought h2 {
+    font-size: 5vw;
+  }
+
+  h2,
+  h1,
+  p,
+  span {
+    font-size: 5vw;
+  }
+
+  .parent-cat-card-container {
+    width: 92vw;
+    flex-wrap: wrap;
+  }
+
+  .parent-cat-card {
+    width: 10vw;
+    margin: 10px 0;
+    flex: 1;
+  }
+
+  .parent-cat-card p {
+    font-size: 3vw;
+  }
+
+  .profile {
+    width: 80vw;
+  }
+}

@@ -1,0 +1,131 @@
+/* styles/About.css */
+.about-container {
+  width: 60vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-container:hover {
+  /* transform: translateY(-5px); */
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.hero-section h1 {
+  color: #3498db;
+  font-size: 2.5rem;
+}
+
+.hero-section p {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.content-section {
+  line-height: 1.6;
+  margin-bottom: 5%;
+}
+
+.content-section p {
+  margin-bottom: 4%;
+}
+
+.features-section {
+  margin-bottom: 4%;
+}
+
+.features-section h2 {
+  color: #e74c3c;
+  font-size: 2rem;
+}
+
+.features-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features-section li {
+  margin-bottom: 10px;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #2ecc71;
+  font-size: 2rem;
+}
+
+.contact-section p {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.contact-section a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+  .about-container {
+    padding: 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .features-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .features-section p {
+    font-size: 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-section p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-container {
+    width: 80%;
+  }
+
+  .about-container p {
+    font-size: 2vh;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .about-container {
+    width: 100%;
+  }
+
+  .about-container p {
+    font-size: 2vh;
+  }
+}
