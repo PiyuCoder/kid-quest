@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { quizIndexGenerator, speak } from "../utils/allData";
 
 const indexQuiz = quizIndexGenerator(Array.from(Array(26).keys()));
-const baseUrl = process.env.REACT_APP_BASE_URL || "http://localhost:8000";
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 export default function Alphabet() {
   const [currentIndex, setCurrentIndex] = useState();
