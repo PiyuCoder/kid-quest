@@ -24,15 +24,12 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 
-app.use(cors({ origin: "*" }));
-
 app.use(express.json());
+app.use(cors());
 app.use(express.static("public"));
 
-// Serve the frontend
+// Define a route
 app.use("/", express.static("build"));
-
-// For all other routes, serve the frontend's index.html
 // app.get("/*", (req, res) => {
 //   res.sendFile(join(__dirname, "./build", "index.html"));
 // });
