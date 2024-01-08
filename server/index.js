@@ -28,11 +28,13 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
 
-// Define a route
-app.use("/", express.static("build"));
-// app.get("/*", (req, res) => {
-//   res.sendFile(join(__dirname, "./build", "index.html"));
-// });
+// Serve the frontend
+app.use(express.static(join(__dirname, "./build")));
+
+// For all other routes, serve the frontend's index.html
+app.get("/*", (req, res) => {
+  res.sendFile(join(__dirname, "./build", "index.html"));
+});
 
 // user routes
 app.use("/api", userRouter);
