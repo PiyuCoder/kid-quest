@@ -30,7 +30,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Serve the frontend
-app.use("/*", express.static(join(__dirname, "./build")));
+app.use("/", express.static("build"));
 
 // For all other routes, serve the frontend's index.html
 // app.get("/*", (req, res) => {
