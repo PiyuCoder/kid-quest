@@ -30,10 +30,6 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.use("/", express.static("build"));
-app.get("/*", (req, res) => {
-  res.sendFile(join(__dirname, "./build", "index.html"));
-  console.log("this is being called");
-});
 
 // user routes
 app.use("/api", userRouter);
@@ -45,6 +41,11 @@ app.use("/api", createQuizRouter);
 
 // Serve Swagger documentation
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerJSDoc));
+
+app.get("/*", (req, res) => {
+  res.sendFile(join(__dirname, "./build", "index.html"));
+  console.log("this is being called");
+});
 
 // Start the server
 app.listen(PORT, () => {
