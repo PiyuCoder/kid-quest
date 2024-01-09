@@ -18,11 +18,9 @@ import ColorLayout from "./components/ColorLayout.js";
 import LevelOne from "./pages/Color/LevelOne.js";
 import Home from "./pages/Color/Home.js";
 import Login from "./pages/Login.js";
-import ProtectedRoute from "./components/ProtectedRoute.js";
 import LandingPage from "./pages/LandingPage.js";
 import Shapes from "./components/Games/Shapes.js";
 import FlipTheCard from "./components/Games/FlipTheCard.js";
-import MusicalMemoryGame from "./components/Games/RPS.js";
 import AboutPage from "./pages/About.js";
 import FinishModal from "./components/Finish.js";
 import Register from "./pages/Register.js";
@@ -50,7 +48,6 @@ export const router = createBrowserRouter(
       <Route path="games" element={<Games />} />
       <Route path="memory" element={<FlipTheCard />} />
       <Route path="shapes" element={<Shapes />} />
-      <Route path="rps" element={<MusicalMemoryGame />} />
       <Route path="admin" element={<Admin />} />
       <Route path="finish" element={<FinishModal />} />
     </Route>

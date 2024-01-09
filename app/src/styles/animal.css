@@ -8,8 +8,8 @@
 
 .animal-name-container {
   /* background-color: bisque; */
-  width: 40%;
-  text-align: start;
+  width: 60%;
+  text-align: center;
 }
 .animal-main h1 {
   text-transform: capitalize;
@@ -37,12 +37,51 @@
 .animalImg-container:hover {
   box-shadow: 1px 4px 15px 2px black;
   background-color: rgba(217, 0, 255, 0.904);
-  transform: scale(1.1);
 }
 
 .animalImg {
   height: 50vh;
   aspect-ratio: 1;
+}
+
+.animal-top {
+  width: 100%;
+  height: 15vh;
+  background-color: rgba(10, 191, 215, 0);
+  margin-top: 0%;
+}
+
+.animal-top button {
+  height: 50%;
+  aspect-ratio: 1;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-color: rgb(6, 18, 255);
+  box-shadow: 1px 4px 10px 1px black;
+  cursor: pointer;
+  /* z-index: 100; */
+}
+
+.animal-top .animal {
+  width: 7%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+  justify-content: center;
+}
+
+.top-display {
+  width: 80%;
+  background-color: chartreuse;
+  align-items: center;
+  box-shadow: 1px 4px 10px 1px black;
+  border-radius: 20%;
+}
+.top-display h2 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -52,5 +91,29 @@
   .animalImg {
     height: 70vw;
     aspect-ratio: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .animal-main h1 {
+    font-size: 15vw;
+    width: 100%;
+  }
+
+  .animal-top button {
+    width: 12%;
+  }
+
+  .animal-top .animal {
+    width: 25%;
+  }
+
+  .top-display {
+    width: 10rem;
+    padding: 0 1rem;
+  }
+
+  .top-display h2 {
+    font-size: 2rem;
   }
 }

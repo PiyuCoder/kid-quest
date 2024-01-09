@@ -122,7 +122,7 @@
   }
 
   .kid-cat-card-container {
-    width: 50vw;
+    width: 60vw;
 
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);

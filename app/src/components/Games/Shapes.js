@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "..//../styles/shapes.css"; // Import a CSS file for styling
+import "../../styles/shapes.css"; // Import a CSS file for styling
 
 const pits = [
   ["Triangle"],
@@ -28,11 +28,15 @@ export default function Shapes() {
   const [draggedShape, setDraggedShape] = useState(null);
   const [hasRestarted, setHasRestarted] = useState(false);
   const [isAllMatched, setIsAllMatched] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentPit, setCurrentPit] = useState(availablePits[currentIndex]);
 
   const handleDragStart = (event, shape) => {
     event.dataTransfer.setData("shape", shape);
     setDraggedShape(shape);
   };
+
+  console.log(availablePits[currentIndex]);
 
   useEffect(() => {
     setAvailableShapes(shuffleShapes(shapes[level]));
@@ -46,7 +50,7 @@ export default function Shapes() {
         setIsAllMatched(false);
       }, 3000);
     }
-  }, [draggedShape]);
+  }, [draggedShape, currentIndex]);
 
   const handleDropStart = (event, pit) => {
     event.preventDefault();
@@ -66,12 +70,24 @@ export default function Shapes() {
     setDraggedShape(null);
   };
 
+  const onTouchHandler = (event, shape) => {
+    if (availablePits[currentIndex] === shape) {
+      console.log("match");
+      setMatchedShapes((prev) => [...prev, availablePits[currentIndex]]);
+      setAvailableShapes((prevShapes) =>
+        prevShapes.filter((shap) => shap !== shape)
+      );
+      setCurrentIndex((prev) => prev !== availablePits.length - 1 && prev + 1);
+    }
+  };
+
   const restart = () => {
     setAvailableShapes(shuffleShapes(shapes[level]));
     setAvailablePits(shuffleShapes(pits[level]));
     setMatchedShapes([]);
     setIsAllMatched(false);
     setHasRestarted(true);
+    setCurrentIndex(0);
     setTimeout(() => {
       setHasRestarted(false);
     }, 500);
@@ -89,7 +105,11 @@ export default function Shapes() {
                 !hasRestarted
                   ? matchedShapes.includes(pit)
                     ? `${pit}-shape matched`
-                    : `${pit}-pit`
+                    : `${pit}-pit ${
+                        availablePits[currentIndex] === availablePits[i]
+                          ? "currPit"
+                          : ""
+                      }`
                   : `${pit}-pit`
               }`}
               onDragOver={(e) => e.preventDefault()}
@@ -107,6 +127,7 @@ export default function Shapes() {
               draggable
               onDragStart={(event) => handleDragStart(event, shape)}
               onDragEnd={handleDragEnd}
+              onTouchStart={(event) => onTouchHandler(event, shape)}
             ></div>
           ))}
         </div>
@@ -130,6 +151,7 @@ export default function Shapes() {
               level < shapes.length - 1 && setLevel((prev) => prev + 1);
               restart();
               setIsAllMatched(false);
+              setCurrentIndex(0);
             }}
           >
             Next

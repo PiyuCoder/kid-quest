@@ -82,7 +82,7 @@ export default function Animals() {
             )}
           </div>
 
-          <div className="alphabet-top flexC">
+          <div className="animal-top flexC">
             <button
               className="next-btn flexC"
               onClick={() =>
@@ -91,7 +91,7 @@ export default function Animals() {
             >
               <GrPrevious size={30} color="white" />
             </button>
-            <div className="alphabets flexC">
+            <div className="animal flexC">
               <div className="top-display">
                 <h2>{currentIndex + 1}</h2>
               </div>

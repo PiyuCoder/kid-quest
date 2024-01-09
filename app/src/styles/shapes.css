@@ -25,6 +25,10 @@
   justify-content: center;
 }
 
+.currPit {
+  animation: blink 1s infinite;
+}
+
 .pits-container {
   background-color: rgb(23, 23, 23);
   box-shadow: 15px 10px 35px 10px;
@@ -126,7 +130,7 @@
 .shapes-container .Rectangle-shape.dragged,
 .shapes-container .Circle-shape.dragged,
 .shapes-container .Inverted-Triangle-shape.dragged {
-  opacity: 0;
+  opacity: 0.2;
   transition: all 0.2s ease-in-out;
 }
 
@@ -135,7 +139,7 @@
 .Square-shape,
 .Inverted-Triangle-shape,
 .Rectangle-shape {
-  animation: blink 1s infinite;
+  /* animation: blink 1s infinite; */
 }
 
 .matched {
@@ -154,9 +158,9 @@
   }
 }
 
-/* @media screen and (max-width: 480px) {
-  .shapes-container,
-  .pits-container {
-    width: 80%;
+@media screen and (max-width: 768px) {
+  .pits-container,
+  .shapes-container {
+    flex-wrap: wrap;
   }
-} */
+}

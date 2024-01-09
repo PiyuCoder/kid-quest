@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { flipCardData } from "../../utils/gameData";
-import "../../styles/flipCard.css"; // Import a CSS file for styling
+import "../../styles/flipCard.css";
 
 const shuffleArray = (array) => array.slice().sort(() => Math.random() - 0.5);
 

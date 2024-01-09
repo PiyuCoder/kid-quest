@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../styles/header.css";
 import { userContext } from "../context/userContext";
@@ -10,6 +10,7 @@ export default function Header() {
   const { token, setFlag } = useContext(userContext);
   const [isMobile, setIsMobile] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  const divRef = useRef(null);
 
   const storedToken = localStorage.getItem("token");
 
@@ -22,6 +23,21 @@ export default function Header() {
       navigate("/login");
     }
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (divRef.current && !divRef.current.contains(event.target)) {
+        // Clicked outside the div, close it
+        setOpenMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [divRef]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -89,7 +105,7 @@ export default function Header() {
         </>
       )}
       {openMenu ? (
-        <div className="menu-container">
+        <div className="menu-container" ref={divRef}>
           <ul className="menu flexV">
             <Link to="/dashboard" onClick={() => setOpenMenu(false)}>
               Home

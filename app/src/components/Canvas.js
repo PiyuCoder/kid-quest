@@ -10,7 +10,11 @@ const Slate = ({ handleClose, height }) => {
   const startDrawing = (event) => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    const { offsetX, offsetY } = event.nativeEvent;
+
+    // if (event.cancelable) {
+    //   event.preventDefault();
+    // }
+    const { offsetX, offsetY } = getCoordinates(event);
 
     ctx.beginPath();
     ctx.moveTo(offsetX, offsetY);
@@ -34,11 +38,14 @@ const Slate = ({ handleClose, height }) => {
   }, []);
 
   const draw = (event) => {
+    // if (event.cancelable) {
+    //   event.preventDefault();
+    // }
     if (!drawing) return;
 
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
-    const { offsetX, offsetY } = event.nativeEvent;
+    const { offsetX, offsetY } = getCoordinates(event);
 
     ctx.lineTo(offsetX, offsetY);
     ctx.strokeStyle = lineColor;
@@ -72,6 +79,22 @@ const Slate = ({ handleClose, height }) => {
     setLineWidth(width);
   };
 
+  const getCoordinates = (event) => {
+    const canvas = canvasRef.current;
+    let offsetX, offsetY;
+
+    if (event.touches && event.touches.length > 0) {
+      const touch = event.touches[0];
+      offsetX = touch.clientX - canvas.getBoundingClientRect().left;
+      offsetY = touch.clientY - canvas.getBoundingClientRect().top;
+    } else {
+      offsetX = event.nativeEvent.offsetX;
+      offsetY = event.nativeEvent.offsetY;
+    }
+
+    return { offsetX, offsetY };
+  };
+
   const colorPalette = [
     "#000000",
     "#FF0000",
@@ -82,8 +105,6 @@ const Slate = ({ handleClose, height }) => {
     "#00FFFF",
     "white",
   ];
-
-  //   const thicknessOptions = [1, 3, 5, 7, 10];
 
   return (
     <div className="canvas-container">
@@ -104,20 +125,18 @@ const Slate = ({ handleClose, height }) => {
             />
           ))}
         </div>
-        {/* <div>
-          <button className="close-slate" onClick={handleClose}>
-            X
-          </button>
-        </div> */}
       </div>
       <canvas
         ref={canvasRef}
+        onTouchStart={startDrawing}
+        onTouchMove={draw}
+        onTouchEnd={stopDrawing}
         onMouseDown={startDrawing}
         onMouseMove={draw}
         onMouseUp={stopDrawing}
         onMouseOut={stopDrawing}
+        style={{ touchAction: "none" }}
       />
-
       <button className="clear" onClick={clearCanvas}>
         Clear
       </button>
