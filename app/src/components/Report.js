@@ -128,7 +128,7 @@ export default function Report({
               currentTitle !== "animal" ? (
                 currentTitle === "alphabet" || currentTitle === "animal" ? (
                   <img
-                    src={`http://localhost:8000/Images/${currentTitle}s/${quiz?.answer}.png`}
+                    src={`${process.env.REACT_APP_BASE_URL}/Images/${currentTitle}s/${quiz?.answer}.png`}
                   />
                 ) : (
                   colorsArr
