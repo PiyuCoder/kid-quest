@@ -43,6 +43,12 @@ export const animalImages = [
   },
 
   {
+    name: "panda",
+    image:
+      "https://media0.giphy.com/media/wtdVYmaRWJ1PyPcc8e/giphy.gif?cid=ecf05e47wwpcn6sjqgntcwi7qlzfqly3g4jh09gmhvfq64ai&ep=v1_stickers_search&rid=giphy.gif&ct=s",
+  },
+
+  {
     name: "snake",
     image:
       "https://media1.giphy.com/media/46zrcK1C3JwaHArNro/giphy.gif?cid=ecf05e47jx1r6udi0c2taxncoo07frk7zqmgg821xrwx0dcw&ep=v1_stickers_search&rid=giphy.gif&ct=s",
@@ -52,12 +58,6 @@ export const animalImages = [
     name: "yak",
     image:
       "https://media4.giphy.com/media/XZpt6bRbf2eRA8T2JG/giphy.gif?cid=ecf05e477ek3gwt79y8353w3927iu0ns5ll6bamc98sywkw9&ep=v1_stickers_search&rid=giphy.gif&ct=s",
-  },
-
-  {
-    name: "panda",
-    image:
-      "https://media0.giphy.com/media/wtdVYmaRWJ1PyPcc8e/giphy.gif?cid=ecf05e47wwpcn6sjqgntcwi7qlzfqly3g4jh09gmhvfq64ai&ep=v1_stickers_search&rid=giphy.gif&ct=s",
   },
 
   {

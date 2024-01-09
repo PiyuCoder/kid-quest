@@ -26,7 +26,7 @@ const Slate = ({ handleClose, height }) => {
     const ctx = canvas.getContext("2d");
     const resizeCanvas = () => {
       canvas.width = window.innerWidth * 0.9;
-      canvas.height = window.innerHeight * 0.8;
+      canvas.height = window.innerHeight * 0.75;
     };
 
     resizeCanvas();
@@ -75,8 +75,8 @@ const Slate = ({ handleClose, height }) => {
     )}"><circle cx="8" cy="8" r="7"/></svg>') 8 8, auto`;
   };
 
-  const handleLineWidthChange = (width) => {
-    setLineWidth(width);
+  const handleLineWidthChange = (event) => {
+    setLineWidth(parseInt(event.target.value, 10));
   };
 
   const getCoordinates = (event) => {
@@ -108,24 +108,6 @@ const Slate = ({ handleClose, height }) => {
 
   return (
     <div className="canvas-container">
-      <div className="color-container">
-        <div id="colorPalette">
-          {colorPalette.map((color) => (
-            <button
-              key={color}
-              style={{
-                backgroundColor: color,
-                width: "20px",
-                height: "20px",
-                border: "none",
-                cursor: "pointer",
-                borderRadius: "50%",
-              }}
-              onClick={() => handleColorChange(color)}
-            />
-          ))}
-        </div>
-      </div>
       <canvas
         ref={canvasRef}
         onTouchStart={startDrawing}
@@ -140,6 +122,35 @@ const Slate = ({ handleClose, height }) => {
       <button className="clear" onClick={clearCanvas}>
         Clear
       </button>
+      <div className="color-container flex">
+        <div id="colorPalette">
+          {colorPalette.map((color, i) => (
+            <button
+              key={i}
+              style={{
+                backgroundColor: color,
+                width: "20px",
+                height: "20px",
+                border: `${
+                  lineColor === colorPalette[i] ? "2px solid orange" : ""
+                }`,
+                cursor: "pointer",
+                borderRadius: "50%",
+              }}
+              onClick={() => handleColorChange(color)}
+            />
+          ))}
+        </div>
+        <input
+          type="range"
+          className="vertical-slider"
+          max={15}
+          min={1}
+          step={1}
+          value={lineWidth}
+          onChange={handleLineWidthChange}
+        />
+      </div>
     </div>
   );
 };
