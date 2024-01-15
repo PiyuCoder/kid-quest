@@ -7,6 +7,8 @@ info:
 servers:
   - url: "http://localhost:8000"
     description: Local server
+  - url: "https://kidquest.onrender.com/"
+    description: Live server
 
 schemes: [http, https]
 
