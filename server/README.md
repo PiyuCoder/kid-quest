@@ -12,7 +12,7 @@ KidQuest is an interactive educational app designed to make learning a fun and e
 
 ## Features
 
-- **Interactive Lessons:** Engaging lessons that allow kids to learn through play.
+- **Interactive Lessons:** Engaging lessons that allow kids to learn through play. 
 - **Exciting Quizzes:** Fun and interactive quizzes designed to test and reinforce knowledge.
 - **Customized Learning Paths:** Tailored content based on different categories such as alphabets, numbers, colors, and more.
 - **User Progress Tracking:** Monitor your child's progress and achievements in various subjects.
